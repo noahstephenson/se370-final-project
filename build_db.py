@@ -1,6 +1,8 @@
 import sqlite3
 import pandas as pd
 import os
+#Used chat GPT to build this databasing app using SQL lite package in python 
+#The intention behind this was to allow for the app to run and be hosted by Streamlit online
 
 # Constants
 DB_NAME = "nhl_data.db"  # Name your DB generically since you'll expand
