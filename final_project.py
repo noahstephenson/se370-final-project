@@ -54,7 +54,7 @@ if flyers_advanced is None:
 flyers_advanced = flyers_advanced[flyers_advanced['GP'] >= 10]
 st.title("Philadelphia Flyers Advanced Analytics Dashboard")
 
-tabs = st.tabs(["Flyers Player Visuals", "Team Summary", "League Stats", "Goalie Stats", "Player Compare"])
+tabs = st.tabs(["Flyers Player Visuals", "Team Summary", "League Stats", "Goalie Stats", "Player Compare", "Rink Map"])
 
 # --------------------------- TAB 1 ---------------------------
 with tabs[0]:
@@ -392,3 +392,7 @@ with tabs[4]:
         "With players on the x-axis and stat categories as grouped bars, it's easy to distinguish pure scorers from playmakers. "
         "This view supports lineup optimization and player usage decisions by surfacing where each player adds value on the scoresheet."
     )
+    
+    with tabs[5]:
+        from rink_map import render_rink_tab
+        render_rink_tab()
